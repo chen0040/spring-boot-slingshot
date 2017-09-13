@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <title>Spring-Boot Slingshot</title>
+    <title th:text="#{site.app_name}">Home</title>
     <link href="/jslib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/jslib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
 
@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand"><span th:text='#{site.app_name}'>Spring-Boot Slingshot</span></a>
+                <a class="navbar-brand"><span th:text='#{site.app_name}'>Home</span></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul id="navbar-menu" class="nav navbar-nav" sec:authorize="!hasRole('ROLE_DISABLED')">
