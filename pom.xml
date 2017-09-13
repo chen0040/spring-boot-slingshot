@@ -133,8 +133,8 @@
 
 
 
-    <name>Spring Integration with Magento Site</name>
-    <description>Spring Receipt Portal site in Java</description>
+    <name>Spring Boot Slingshot Project</name>
+    <description>slingshot project with spring boot and spring security and spring data jpa as well as elasticsearch using Jest</description>
     <url>https://github.com/chen0040/spring-boot-slingshot</url>
 
 

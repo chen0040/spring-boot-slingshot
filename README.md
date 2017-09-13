@@ -8,6 +8,9 @@ slingshot project with spring boot and spring security and spring data jpa as we
 * Spring Data JPA and Spring Security for Authentication
 * Spring Data JPA configuration for database
 * Jest for ElasticSearch
+* Websocket + sockjs + stompjs
+* Bootstrap + thymeleaf
+* Language (cn + en)
 
 # Configuration
 

@@ -18,7 +18,7 @@ import java.util.Locale;
 @Component
 public class SpringRequestHelper {
 
-   private static final List<String> supportedLanguages = Arrays.asList("en", "sa");
+   private static final List<String> supportedLanguages = Arrays.asList("en", "cn");
 
    @Autowired
    private LocaleResolver localeResolver;
