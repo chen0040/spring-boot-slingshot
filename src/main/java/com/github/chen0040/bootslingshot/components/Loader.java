@@ -60,7 +60,7 @@ public class Loader implements ApplicationListener<ApplicationReadyEvent> {
          admin = new SpringUserEntity();
          admin.setUsername("admin");
          admin.setRoles("ROLE_USER,ROLE_ADMIN");
-         admin.setPassword("receipt@admin2017");
+         admin.setPassword("admin");
          admin.setEmail("xs0040@gmail.com");
          admin.setToken(UUID.randomUUID().toString());
          admin.setEnabled(true);
@@ -70,36 +70,30 @@ public class Loader implements ApplicationListener<ApplicationReadyEvent> {
    }
 
    private void setupUsers(SpringUserService userService){
-      for(int i=1; i <= 2; ++i){
-         String companyName = "company" + i;
-         logger.info("Setup {}", companyName);
+      String companyName = "demo";
+      logger.info("Setup {}", companyName);
 
 
 
-         String username = "user" + i;
-         logger.info("Setup {}", username);
+      String username = "demo" ;
+      logger.info("Setup {}", username);
 
-         SpringUser user;
-         Optional<SpringUser> userOptional = userService.findUserByUsername(username);
-         if(userOptional.isPresent()) {
-            user = userOptional.get();
-         } else {
-            user = new SpringUserEntity();
-            if(i == 1) {
-               user.setEmail("xs0040@gmail.com");
-            } else {
-               user.setEmail("xs0040@gmail.com");
-            }
+      SpringUser user;
+      Optional<SpringUser> userOptional = userService.findUserByUsername(username);
+      if(userOptional.isPresent()) {
+         user = userOptional.get();
+      } else {
+         user = new SpringUserEntity();
+         user.setEmail("xs0040@gmail.com");
 
-            user.setUsername(username);
-            user.setPassword(username);
-            user.setToken(UUID.randomUUID().toString());
-            user.setEnabled(true);
-         }
-
-         user.setRoles("ROLE_USER");
-         userService.save(user);
+         user.setUsername(username);
+         user.setPassword(username);
+         user.setToken(UUID.randomUUID().toString());
+         user.setEnabled(true);
       }
+
+      user.setRoles("ROLE_USER");
+      userService.save(user);
    }
 
 

@@ -31,6 +31,15 @@ If your mysql or mariadb does not use these configuration, please change the set
 
 This is just a template project that provides slingshot. Just use it as the starting point for your spring boot project development.
 
+Note that the application will generate two accounts in the database on startup if they don't exist:
+
+ADMIN:
+username: admin
+password: admin
+
+DEMO:
+username: demo
+password: demo
 
 
 
