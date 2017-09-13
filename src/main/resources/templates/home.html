@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand"><span th:text='#{site.spring-receipt}'>Spring-Boot Slingshot</span></a>
+                <a class="navbar-brand"><span th:text='#{site.app_name}'>Spring-Boot Slingshot</span></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul id="navbar-menu" class="nav navbar-nav" sec:authorize="!hasRole('ROLE_DISABLED')">
@@ -46,27 +46,12 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="/logout">
                             <span class="glyphicon glyphicon-user" style="margin-right: 5px;"></span>
                             <span sec:authentication="name">Bob</span>
-
+                            <span class="glyphicon glyphicon-log-out"></span>
+                            <span th:text="#{site.logout}">Logout</span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#/account">
-                                    <span class="glyphicon glyphicon-cog"></span>
-                                    &nbsp;
-                                    <span th:text="#{site.account.settings}">Account Settings</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" ng-click="logout()">
-                                    <span class="glyphicon glyphicon-log-out"></span>
-                                    &nbsp;
-                                    <span th:text="#{site.logout}">Logout</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                 </ul>
             </div>
@@ -106,7 +91,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand"><span th:text="#{site.spring-receipt}">RECEIPT-HOME Vendors</span></a>
+                <a class="navbar-brand"><span th:text="#{site.app_name}">RECEIPT-HOME Vendors</span></a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav" sec:authorize="!hasRole('ROLE_DISABLED')">
@@ -125,44 +110,16 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <div class="navbar-lang font-sm">
-                            <a href="?lang=en">English</a> | <a href="?lang=sa"> العربية</a>
+                            <a href="?lang=en">English</a> | <a href="?lang=cn">Chinese</a>
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                        <a href="/logout">
                             <span class="glyphicon glyphicon-user" style="margin-right: 5px;"></span>
                             <span sec:authentication="name">Bob</span>
+                            <span class="glyphicon glyphicon-log-out"></span>
+                            <span th:text="#{site.logout}">Logout</span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#/account">
-                                    <span class="glyphicon glyphicon-cog"></span>
-                                    &nbsp;
-                                    <span th:text="#{site.account.settings}">Account Settings</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#/faq-page">
-                                    <span class="glyphicon glyphicon-info-sign"></span>
-                                    &nbsp;
-                                    <span th:text="#{site.help.faq}">Help - FAQ</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#/contact-support">
-                                    <span class="glyphicon glyphicon-envelope"></span>
-                                    &nbsp;
-                                    <span th:text="#{site.contact.support}">Contact Support</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" ng-click="logout()">
-                                    <span class="glyphicon glyphicon-log-out"></span>
-                                    &nbsp;
-                                    <span th:text="#{site.logout}">Logout</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                 </ul>
             </div>

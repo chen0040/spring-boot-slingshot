@@ -14,7 +14,7 @@
         }
 
         var connectToHost = function() {
-            var url = "/spring-receipt";
+            var url = "/app_name";
 
             socket = new SockJS(url);
             stompClient = Stomp.over(socket);
