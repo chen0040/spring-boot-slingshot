@@ -34,6 +34,12 @@ public class WebApiController {
 
     private static final Logger logger = LoggerFactory.getLogger(WebApiController.class);
 
+    @RequestMapping(value="ping-web-api", method=RequestMethod.GET)
+    public @ResponseBody Map<String, String> apiProbeAjax(HttpServletRequest request){
+        return requestHelper.getTokenInfo(request);
+    }
+
+
     @RequestMapping(value = "login-web-api", method = RequestMethod.POST, consumes = "application/json")
     public @ResponseBody
     SpringIdentity login(
