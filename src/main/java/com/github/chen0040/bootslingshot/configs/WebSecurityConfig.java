@@ -51,7 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
               .antMatchers("/signup").permitAll()
               .antMatchers("/locales").permitAll()
               .antMatchers("/locales/**").permitAll()
-              .antMatchers("/privacy-policy").permitAll()
+              .antMatchers("/login-web-api").permitAll()
               .antMatchers("/change-locale").permitAll()
               .antMatchers("/link-cache").permitAll()
               .antMatchers("/signup-success").permitAll()
